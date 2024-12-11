@@ -1,21 +1,28 @@
 body {
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 #container {
     width: 980px;
-    height: 980px;
+    height: 780px;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn {
-    padding: 10px 15px;
+    padding: 15px 20px;
+    width: 110px;
     border: none;
     border-radius: 5px;
     background-color: #0b2364;
     color: #fff;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .game-board {

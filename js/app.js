@@ -42,7 +42,7 @@ function createGrid (gridSize) {
 }
 
 
-// ***** Attaching Elements *****
+// ***** Attaching Elements to Project Container *****
 container.appendChild(title);
 container.appendChild(startBtn);
 container.appendChild(clearBtn);
