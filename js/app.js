@@ -31,9 +31,9 @@ function createGrid (gridSize) {
     const boxSize = ((500/gridSize)-2);
     for (let i = 0; i < (gridSize*gridSize); i++) {
         let box = document.createElement("div");
+        box.classList.add("grid-box");
         box.style.width = boxSize.toString() + "px";
         box.style.height = boxSize.toString() + "px";
-        box.style.border = "1px solid black";
         box.addEventListener("mouseover", () => {
             box.style.backgroundColor = "red";
         })

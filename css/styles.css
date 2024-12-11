@@ -29,3 +29,7 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+.grid-box {
+    border: 1px solid #000;
+}
