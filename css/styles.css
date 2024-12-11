@@ -1,0 +1,18 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    width: 980px;
+    height: 980px;
+    border: 1px solid black;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0b2364;
+    color: #fff;
+}
