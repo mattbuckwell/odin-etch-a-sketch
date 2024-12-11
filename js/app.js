@@ -12,17 +12,20 @@ startBtn.classList.add("btn");
 startBtn.addEventListener("click", () => {
     const gridSize = prompt("What size grid would you like? (Maximum 100)");
     createGrid(gridSize);
-})
+});
 
 const clearBtn = document.createElement("button");
 clearBtn.textContent = "Clear Grid";
 clearBtn.classList.add("btn");
+clearBtn.addEventListener("click", () => {
+    const gridBoxes = document.querySelectorAll(".grid-box");
+    gridBoxes.forEach(element => {
+        element.remove();
+    });
+});
 
 // ***** Grid Container *****
 const gameBoard = document.createElement("div");
-gameBoard.style.width = "500px";
-gameBoard.style.height = "500px";
-gameBoard.style.border = "1px solid black";
 gameBoard.classList.add("game-board");
 
 

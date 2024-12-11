@@ -28,6 +28,9 @@ body {
 .game-board {
     display: flex;
     flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
 }
 
 .grid-box {
