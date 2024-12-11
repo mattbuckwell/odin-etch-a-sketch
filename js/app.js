@@ -33,12 +33,12 @@ gameBoard.classList.add("game-board");
 function createGrid (gridSize) {
     const boxSize = ((500/gridSize)-2);
     for (let i = 0; i < (gridSize*gridSize); i++) {
-        let box = document.createElement("div");
-        box.classList.add("grid-box");
-        box.style.width = boxSize.toString() + "px";
-        box.style.height = boxSize.toString() + "px";
-        box.addEventListener("mouseover", () => {
-            box.style.backgroundColor = "red";
+        let gridBox = document.createElement("div");
+        girdBox.classList.add("grid-box");
+        girdBox.style.width = boxSize.toString() + "px";
+        girdBox.style.height = boxSize.toString() + "px";
+        gridBox.addEventListener("mouseover", () => {
+            gridBox.style.backgroundColor = "red";
         })
         gameBoard.appendChild(box);
     }
