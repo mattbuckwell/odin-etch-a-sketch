@@ -10,7 +10,7 @@ const startBtn = document.createElement("button");
 startBtn.textContent = "Create Grid";
 startBtn.classList.add("btn");
 startBtn.addEventListener("click", () => {
-    const gridSize = prompt("What size grid would you like? (Pick between 8 - 16)");
+    const gridSize = prompt("What size grid would you like? (Maximum 100)");
     createGrid(gridSize);
 })
 
@@ -26,14 +26,17 @@ gameBoard.style.border = "1px solid black";
 gameBoard.classList.add("game-board");
 
 
-// ***** Grid Function *****
+// ***** Grid Creation Function *****
 function createGrid (gridSize) {
-    const divSize = ((500/gridSize)-2);
+    const boxSize = ((500/gridSize)-2);
     for (let i = 0; i < (gridSize*gridSize); i++) {
         let box = document.createElement("div");
-        box.style.width = divSize.toString() + "px";
-        box.style.height = divSize.toString() + "px";
+        box.style.width = boxSize.toString() + "px";
+        box.style.height = boxSize.toString() + "px";
         box.style.border = "1px solid black";
+        box.addEventListener("mouseover", () => {
+            box.style.backgroundColor = "red";
+        })
         gameBoard.appendChild(box);
     }
 }
