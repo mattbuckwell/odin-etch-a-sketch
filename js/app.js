@@ -55,7 +55,7 @@ function deleteGrid () {
 
 // ***** Attaching Elements to Project Container *****
 container.appendChild(title);
-container.appendChild(startBtn);
+container.appendChild(createBtn);
 container.appendChild(clearBtn);
 container.appendChild(gameBoard);
 
