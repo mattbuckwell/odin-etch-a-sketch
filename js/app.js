@@ -1,11 +1,13 @@
 // ***** Project Container *****
 const container = document.querySelector("#container");
 
+
 // ***** Project Title *****
 const title = document.createElement("h1");
 title.textContent = "Etch-A-Sketch";
 
-// ***** Buttons *****
+
+// ***** Project Buttons *****
 const startBtn = document.createElement("button");
 startBtn.textContent = "Create Grid";
 startBtn.classList.add("btn");
@@ -19,19 +21,16 @@ const clearBtn = document.createElement("button");
 clearBtn.textContent = "Clear Grid";
 clearBtn.classList.add("btn");
 clearBtn.addEventListener("click", () => {
-    // const gridBoxes = document.querySelectorAll(".grid-box");
-    // gridBoxes.forEach(element => {
-    //     element.remove();
-    // });
     deleteGrid();
 });
+
 
 // ***** Grid Container *****
 const gameBoard = document.createElement("div");
 gameBoard.classList.add("game-board");
 
 
-// ***** Grid Creation Function *****
+// ***** Grid Functions *****
 function createGrid (gridSize) {
     const boxSize = ((500/gridSize)-2);
     for (let i = 0; i < (gridSize*gridSize); i++) {
@@ -46,7 +45,6 @@ function createGrid (gridSize) {
     }
 }
 
-// ***** Grid Deletion Function *****
 function deleteGrid () {
     const gridBoxes = document.querySelectorAll(".grid-box");
     gridBoxes.forEach(element => {
@@ -61,4 +59,6 @@ container.appendChild(startBtn);
 container.appendChild(clearBtn);
 container.appendChild(gameBoard);
 
+
+// ***** Default Starting Grid *****
 createGrid(8);
