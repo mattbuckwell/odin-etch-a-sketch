@@ -11,6 +11,7 @@ startBtn.textContent = "Create Grid";
 startBtn.classList.add("btn");
 startBtn.addEventListener("click", () => {
     const gridSize = prompt("What size grid would you like? (Maximum 100)");
+    deleteGrid();
     createGrid(gridSize);
 });
 
@@ -59,3 +60,5 @@ container.appendChild(title);
 container.appendChild(startBtn);
 container.appendChild(clearBtn);
 container.appendChild(gameBoard);
+
+createGrid(8);
