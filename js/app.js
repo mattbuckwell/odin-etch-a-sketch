@@ -8,10 +8,10 @@ title.textContent = "Etch-A-Sketch";
 
 
 // ***** Project Buttons *****
-const startBtn = document.createElement("button");
-startBtn.textContent = "Create Grid";
-startBtn.classList.add("btn");
-startBtn.addEventListener("click", () => {
+const createBtn = document.createElement("button");
+createBtn.textContent = "Create Grid";
+createBtn.classList.add("btn");
+createBtn.addEventListener("click", () => {
     const gridSize = prompt("What size grid would you like? (Maximum 100)");
     deleteGrid();
     createGrid(gridSize);
