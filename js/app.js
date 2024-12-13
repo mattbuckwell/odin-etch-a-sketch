@@ -18,10 +18,11 @@ const clearBtn = document.createElement("button");
 clearBtn.textContent = "Clear Grid";
 clearBtn.classList.add("btn");
 clearBtn.addEventListener("click", () => {
-    const gridBoxes = document.querySelectorAll(".grid-box");
-    gridBoxes.forEach(element => {
-        element.remove();
-    });
+    // const gridBoxes = document.querySelectorAll(".grid-box");
+    // gridBoxes.forEach(element => {
+    //     element.remove();
+    // });
+    deleteGrid();
 });
 
 // ***** Grid Container *****
@@ -42,6 +43,14 @@ function createGrid (gridSize) {
         })
         gameBoard.appendChild(gridBox);
     }
+}
+
+// ***** Grid Deletion Function *****
+function deleteGrid () {
+    const gridBoxes = document.querySelectorAll(".grid-box");
+    gridBoxes.forEach(element => {
+        element.remove();
+    });
 }
 
 
