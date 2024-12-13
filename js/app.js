@@ -21,7 +21,7 @@ const clearBtn = document.createElement("button");
 clearBtn.textContent = "Clear Grid";
 clearBtn.classList.add("btn");
 clearBtn.addEventListener("click", () => {
-    deleteGrid();
+    clearGrid();
 });
 
 
@@ -43,6 +43,13 @@ function createGrid (gridSize) {
         })
         gameBoard.appendChild(gridBox);
     }
+}
+
+function clearGrid () {
+    const gridBxoes = document.querySelectorAll(".grid-box");
+    gridBxoes.forEach(element => {
+        element.style.backgroundColor = "white";
+    });
 }
 
 function deleteGrid () {
